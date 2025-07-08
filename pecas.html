@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Fut - Bares</title>
+    <style>
+        body {
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            
+            justify-content: top;
+            align-items: top; 
+            min-height: 50vh;
+        }
+        .container {
+            display: grid; margin-top:30px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            max-width: 800px;
+			margin:auto;
+        }
+        .bar {
+            background-color: #222;
+			padding:20px; width:100px;
+            height: 80px;
+			width:100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            text-align: center;
+        }
+		.bar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+		
+		@media only screen and (max-width: 800px) {
+		.container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+			
+            max-width: 93%;
+        }
+		
+		.bar {
+            background-color: #222;
+			padding:20px; 
+            height: 80px;
+			width:79%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            text-align: center;
+        
+		}
+		
+        .bar a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .bar a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+
+<br><br>
+	<div align="center">
+	
+	<div style="padding-top: 30px; margin-bottom: 5px; width: 187px; margin: auto;">
+    <img src="img/logo.png" width="100">
+  </div>
+	
+	<div>
+		<h1 style="padding-top:15px; margin-bottom:5px; width:287px; margin:auto; margin-top:5px; color:#fff; font-size:25px;">Painel de Comando de Ar em Feira de Santana - Serra Auto Ar</h1>
+	</div><br><br>	
+
+    <div class="container" align="center" style="clear:both; width:800px; margin-top:30px;">
+	
+		<div class="bar">
+            <a href="condensador.html">Condensador</a>
+        </div>
+        <div class="bar">
+            <a href="compressor.html">Compressor</a>
+        </div>
+        <div class="bar">
+            <a href="motor-ventilador.html">Motor Ventilador</a>
+        </div>
+        <div class="bar">
+            <a href="painel-comando-ar.html">Painel de Comando de Ar</a>
+        </div>
+		
+		</div>
+		
+		
+		
+    </div>
+</body>
+</html>

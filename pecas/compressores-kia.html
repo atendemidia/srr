@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Compressores Kia em Feira de Santana para Soul, Sportage, Sorento, Cerato, Picanto e outros modelos. Venda, instalação e manutenção de Compressores automotivos com garantia e preços justos em Feira de Santana." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Compressores Kia em Feira de Santana - Serra Auto Peças</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#000; color:#fff; margin:0; padding:20px; }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    header img {
+      max-width: 150px;
+	  margin-top:40px;
+      height: auto;
+    }
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .filter-buttons button {
+      background: #333;
+      border: none;
+      padding: 10px 16px;
+      font-weight: bold;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 6px;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+    .filter-buttons button:hover {
+      background-color: #e6b800;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: 600px;
+      margin: 0 auto;
+      justify-content: center;
+    }
+    .gallery-item {
+      background: #ffcc00;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-weight: bold;
+      color: #000;
+      cursor: pointer;
+      min-width: 120px;
+      text-align: center;
+      user-select: none;
+    }
+    .gallery-item a {
+      color: #000;
+      text-decoration: none;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="img/logo.png" alt="Logo Serra Auto Peças" /><br><br>
+  <h1>Compressores Kia em Feira de Santana - Serra Auto Peças</h1>
+</header>
+
+<p style="max-width:600px; margin: auto; text-align: center;">Compressores Kia em Feira de Santana para Soul, Sportage, Sorento, Cerato, Picanto e outros modelos. Venda, instalação e manutenção de Compressores automotivos com garantia e preços justos em Feira de Santana.</p>
+
+<br><br>
+
+<div class="filter-buttons">
+  <button onclick="sortGallery('popular')">Mais Populares</button>
+  <button onclick="sortGallery('alphabetical')">Ordem Alfabética</button>
+</div>
+
+<div id="gallery-items" class="gallery">
+    <div class="gallery-item"><a href="#" onclick="openWhatsApp('Kia', 'Soul')">Soul</a></div>
+    <div class="gallery-item"><a href="#" onclick="openWhatsApp('Kia', 'Sportage')">Sportage</a></div>
+    <div class="gallery-item"><a href="#" onclick="openWhatsApp('Kia', 'Sorento')">Sorento</a></div>
+    <div class="gallery-item"><a href="#" onclick="openWhatsApp('Kia', 'Cerato')">Cerato</a></div>
+    <div class="gallery-item"><a href="#" onclick="openWhatsApp('Kia', 'Picanto')">Picanto</a></div>
+    <div class="gallery-item"><a href="#" onclick="openWhatsApp('Kia', 'Stonic')">Stonic</a></div>
+    <div class="gallery-item"><a href="#" onclick="openWhatsApp('Kia', 'Rio')">Rio</a></div>
+    <div class="gallery-item"><a href="#" onclick="openWhatsApp('Kia', 'Optima')">Optima</a></div>
+    <div class="gallery-item"><a href="#" onclick="openWhatsApp('Kia', 'Carnival')">Carnival</a></div>
+    <div class="gallery-item"><a href="#" onclick="openWhatsApp('Kia', 'Telluride')">Telluride</a></div>
+</div>
+
+<script>
+  function openWhatsApp(marca, modelo) {
+    const phone = "75981864242";
+    const message = `Olá! Estou buscando Compressor para ${marca} ${modelo}.`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  }
+
+  function sortGallery(type) {
+    const container = document.getElementById("gallery-items");
+    const items = Array.from(container.getElementsByClassName("gallery-item"));
+
+    items.sort((a, b) => {
+      const textA = a.textContent.trim();
+      const textB = b.textContent.trim();
+
+      if (type === 'alphabetical') {
+        return textA.localeCompare(textB);
+      } else {
+        // Ordem de popularidade manual (você pode ajustar esta lista)
+        const popularOrder = [
+          "Onix", "Prisma", "S10", "Spin", "Cruze", "Cobalt", "Tracker", "Montana", "Captiva",
+          "Joy", "Agile", "Classic", "Meriva", "Zafira", "Celta", "Omega", "Astra", "Vectra",
+          "Trailblazer", "Blazer", "Camaro", "Malibu", "Monza", "Opala", "Kadett", "Chevette",
+          "D20", "Silverado", "Bolt", "Tigra", "Veraneio", "Trafic", "Corvette", "Sonic", "Trax",
+          "Lumina", "Volt", "Corsavan"
+        ];
+        return popularOrder.indexOf(textA) - popularOrder.indexOf(textB);
+      }
+    });
+
+    container.innerHTML = "";
+    items.forEach(item => container.appendChild(item));
+  }
+</script>
+
+<br><br>
+
+</body>
+</html>
