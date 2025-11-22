@@ -1,26 +1,33 @@
 future: true
 permalink: /:title/
 title: Serra Auto Ar
-# _config.yml — SITEMAP COM SOMENTE OS POSTS (nada mais)
+
+# _config.yml — SITEMAP COM SOMENTE POSTS + HOMEPAGE
 
 url: "https://serraautoar.com.br"
 baseurl: ""
 
 plugins:
   - jekyll-sitemap
+  - jekyll-seo-tag   # opcional, mas recomendado
 
-# ==========================================
-# SÓ OS POSTS ENTRAM NO SITEMAP
-# ==========================================
+# =================================================
+# SITEMAP: só homepage + posts (nada mais)
+# =================================================
 defaults:
   -
     scope:
-      path: ""                # todas as páginas do site
+      path: ""                # tudo no site
     values:
-      sitemap: false          # padrão = NÃO entra no sitemap
+      sitemap: false          # padrão = não entra
   -
     scope:
-      path: "_posts"          # ← só a pasta dos posts
+      path: ""                # página inicial (index.md ou index.html)
+      type: pages
     values:
-      sitemap: true           # ← esses entram sim
-
+      sitemap: true           # entra sim
+  -
+    scope:
+      path: "_posts"          # pasta dos posts
+    values:
+      sitemap: true           # entra sim
